@@ -1,0 +1,37 @@
+{
+  "id": "/akka-http",
+  "cmd": null,
+  "cpus": 0.1,
+  "mem": 128,
+  "disk": 0,
+  "instances": 1,
+  "acceptedResourceRoles": [
+    "*"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "forcePullImage": true,
+      "image": "mmekuria/test-rest:1.0.0",
+      "parameters": [],
+      "privileged": true
+    },
+    "volumes": [],
+    "portMappings": [
+      {
+        "containerPort": 0,
+        "hostPort": 9000,
+        "labels": {},
+        "name": "default",
+        "protocol": "tcp",
+        "servicePort": 10101
+      }
+    ]
+  },
+  "networks": [
+    {
+      "mode": "container/bridge"
+    }
+  ],
+  "portDefinitions": []
+}
